@@ -1,0 +1,47 @@
+﻿* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+header, footer, #left-menu {
+    background-color: #00a046;
+    color: white;
+    border-radius: 5px;
+}
+
+header .row, footer .row, #left-menu {
+    padding: 20px;
+}
+
+.icon {
+    width: 15px;
+    height: 15px;
+    fill: white;
+    padding: 2px;
+}
+
+.icon-add-to-favorites {
+    fill: red;
+}
+
+.icon-add-to-cart {
+    fill: green;
+}
+
+footer {
+    background-color: #f5f5f5;
+    border-radius: 0;
+    color: #4d4b4b;
+}
+
+#left-menu {
+    background-color: #f5f5f5;
+    color: #4d4b4b;
+}
+
+.color-primary {
+    color: #508484;
+}
+
+.filter-inner {
+    padding-left: 15px;
+}

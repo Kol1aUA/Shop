@@ -1,0 +1,99 @@
+﻿@model ShopAdoAspNet.Models.DisplayGoodsViewModel
+
+@{
+    ViewBag.Title = "Shop";
+}
+
+<main class="container mt-3">
+    <div class="row">
+        <div id="left-menu" class="col-lg-3">
+            <div id="sort-panel">
+                <h4>Sort</h4>
+                <div class="filter-inner">
+                    <input class="sorting-btn" type="radio" name="sort-price" value="Sort by price" />
+                    <input class="sorting-btn" type="radio" name="sort-price" value="Sort by name" />
+                    <input class="sorting-btn" type="radio" name="sort-price" value="Sort by amount" />
+                </div>
+            </div>
+            @using (Html.BeginForm("Index", "Shop", FormMethod.Post, new { id = "get-goods-form" }))
+            {
+                <div class="filter">
+                    <h4>Category</h4>
+                    <div class="filter-inner" id="categories">
+                        @for (int i = 0; i < Model.Filter.Categories.Count(); i++)
+                        {
+                            <div class="custom-control custom-checkbox">
+                                @Html.HiddenFor(model => model.Filter.Categories[i].Item.CategoryId)
+                                @Html.HiddenFor(model => model.Filter.Categories[i].Item.CategoryName)
+                                @Html.EditorFor(model => model.Filter.Categories[i].IsChecked)
+                                <span>@Model.Filter.Categories[i].Item.CategoryName</span>
+                            </div>
+                        }
+                    </div>
+                </div>
+                <div class="filter mt-3">
+                    <h4>Manufacturers</h4>
+                    <div class="filter-inner" id="manufacturers">
+                        @for (int i = 0; i < Model.Filter.Manufacturers.Count(); i++)
+                        {
+                            <div class="custom-control custom-checkbox">
+                                @Html.HiddenFor(model => model.Filter.Manufacturers[i].Item.ManufacturerId)
+                                @Html.HiddenFor(model => model.Filter.Manufacturers[i].Item.ManufacturerName)
+                                @Html.EditorFor(model => model.Filter.Manufacturers[i].IsChecked)
+                                <span>@Model.Filter.Manufacturers[i].Item.ManufacturerName</span>
+                            </div>
+                        }
+                    </div>
+                </div>
+                <div class="filter mt-3">
+                    <h4>Price Range</h4>
+                    <div class="input-group">
+                        @Html.EditorFor(model => model.Filter.PriceFrom, new { htmlAttributes = new { @class = "form-control", placeholder = "From", type = "number" } })
+                        @Html.EditorFor(model => model.Filter.PriceTo, new { htmlAttributes = new { @class = "form-control", placeholder = "To", type = "number" } })
+                    </div>
+                </div>
+                <input type="submit" class="btn btn-success mt-3">
+            }
+        </div>
+        <div class="col-lg-9 d-flex flex-row flex-wrap">
+            @foreach (var item in Model.Goods)
+            {
+                <div class="card mb-2 mr-2" style="width: 15rem;">
+                    <div class="card-img p-3">
+                        <img class="card-img-top"
+                             src="@(item.Photos.FirstOrDefault()?.PhotoPath)"
+                             alt="">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">@item.GoodName</h5>
+                        <div class="d-flex flex-row justify-content-between">
+                            <p class="card-text color-primary">@item.Price USD</p>
+                            <div class="group">
+                                <a href="#" class="text-decoration-none">
+                                    <svg class="icon-add-to-cart" width="25" height="25"
+                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8">
+                                        <path d="M.34 0a.5.5 0 0 0 .16 1h1.5l.09.25.41 1.25.41 1.25c.04.13.21.25.34.25h3.5c.14 0 .3-.12.34-.25l.81-2.5c.04-.13-.02-.25-.16-.25h-4.44l-.38-.72a.5.5 0 0 0-.44-.28h-2a.5.5 0 0 0-.09 0 .5.5 0 0 0-.06 0zm3.16 5c-.28 0-.5.22-.5.5s.22.5.5.5.5-.22.5-.5-.22-.5-.5-.5zm3 0c-.28 0-.5.22-.5.5s.22.5.5.5.5-.22.5-.5-.22-.5-.5-.5z"
+                                              transform="translate(0 1)" />
+                                    </svg>
+                                </a>
+                                <a href="#" class="text-decoration-none">
+                                    <svg class="icon-add-to-favorites" width="25" height="25"
+                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8">
+                                        <path d="M2 0c-.55 0-1.04.23-1.41.59-.36.36-.59.85-.59 1.41 0 .55.23 1.04.59 1.41l3.41 3.41 3.41-3.41c.36-.36.59-.85.59-1.41 0-.55-.23-1.04-.59-1.41-.36-.36-.85-.59-1.41-.59-.55 0-1.04.23-1.41.59-.36.36-.59.85-.59 1.41 0-.55-.23-1.04-.59-1.41-.36-.36-.85-.59-1.41-.59z"
+                                              transform="translate(0 1)" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</main>
+
+<script>
+                    //$(() => {
+                    //    $("get-goods-form").on("submit")
+                    //});
+</script>

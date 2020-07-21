@@ -1,0 +1,26 @@
+﻿@model ShopAdo.DAL.Manufacturer
+
+@{
+    ViewBag.Title = "Manufacturer Details";
+}
+
+<main class="container mt-3">
+    <div class="row">
+        <table class="table">
+            <thead>
+            <td>Manufacturer Id</td>
+            <td>Manufacturer</td>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Model.ManufacturerId</td>
+                    <td>@Model.ManufacturerName</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ManufacturerId }, new { @class = "text-success" }) |
+        @Html.ActionLink("Back to List", "Index", "Good", new { @class = "text-success" })
+    </p>
+</main>

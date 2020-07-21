@@ -1,0 +1,26 @@
+﻿@model ShopAdo.DAL.Category
+
+@{
+    ViewBag.Title = "Category Details";
+}
+
+<main class="container mt-3">
+    <div class="row">
+        <table class="table">
+            <thead>
+            <td>Category Id</td>
+            <td>Category</td>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Model.CategoryId</td>
+                    <td>@Model.CategoryName</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.CategoryId }, new { @class = "text-success" }) |
+        @Html.ActionLink("Back to List", "Index", "Category", new { @class = "text-success" })
+    </p>
+</main>

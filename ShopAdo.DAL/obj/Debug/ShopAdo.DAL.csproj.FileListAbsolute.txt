@@ -1,0 +1,12 @@
+C:\Users\Kolya\Downloads\ShopAdoAspNet-master\ShopAdoAspNet\ShopAdo.DAL\bin\Debug\ShopAdo.DAL.dll.config
+C:\Users\Kolya\Downloads\ShopAdoAspNet-master\ShopAdoAspNet\ShopAdo.DAL\bin\Debug\ShopAdo.DAL.dll
+C:\Users\Kolya\Downloads\ShopAdoAspNet-master\ShopAdoAspNet\ShopAdo.DAL\bin\Debug\ShopAdo.DAL.pdb
+C:\Users\Kolya\Downloads\ShopAdoAspNet-master\ShopAdoAspNet\ShopAdo.DAL\bin\Debug\EntityFramework.dll
+C:\Users\Kolya\Downloads\ShopAdoAspNet-master\ShopAdoAspNet\ShopAdo.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Kolya\Downloads\ShopAdoAspNet-master\ShopAdoAspNet\ShopAdo.DAL\bin\Debug\EntityFramework.xml
+C:\Users\Kolya\Downloads\ShopAdoAspNet-master\ShopAdoAspNet\ShopAdo.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Kolya\Downloads\ShopAdoAspNet-master\ShopAdoAspNet\ShopAdo.DAL\obj\Debug\ShopAdo.DAL.csprojAssemblyReference.cache
+C:\Users\Kolya\Downloads\ShopAdoAspNet-master\ShopAdoAspNet\ShopAdo.DAL\obj\Debug\ShopAdo.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Kolya\Downloads\ShopAdoAspNet-master\ShopAdoAspNet\ShopAdo.DAL\obj\Debug\ShopAdo.DAL.csproj.CopyComplete
+C:\Users\Kolya\Downloads\ShopAdoAspNet-master\ShopAdoAspNet\ShopAdo.DAL\obj\Debug\ShopAdo.DAL.dll
+C:\Users\Kolya\Downloads\ShopAdoAspNet-master\ShopAdoAspNet\ShopAdo.DAL\obj\Debug\ShopAdo.DAL.pdb

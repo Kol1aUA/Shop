@@ -1,0 +1,64 @@
+﻿@model IEnumerable<ShopAdo.DAL.Good>
+
+@{
+    ViewBag.Title = "Good Table";
+}
+
+<main class="container">
+    <div class="row mt-3">
+        @Html.ActionLink("Create new", "Add", null, new { @class = "btn btn-success" })
+    </div>
+    <div class="row mt-3">
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.GoodId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.GoodName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Manufacturer.ManufacturerName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Category.CategoryName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Price)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.GoodCount)
+                </th>
+                <th></th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.GoodId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.GoodName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Manufacturer.ManufacturerName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Category.CategoryName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Price)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.GoodCount)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.GoodId }, new { @class = "text-warning" }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.GoodId }, new { @class = "text-success" }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.GoodId }, new { @class = "text-danger" })
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</main>

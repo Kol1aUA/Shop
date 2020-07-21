@@ -1,0 +1,34 @@
+﻿@model ShopAdo.DAL.Good
+
+@{
+    ViewBag.Title = "Good Details";
+}
+
+<main class="container mt-3">
+    <div class="row">
+        <table class="table">
+            <thead>
+                <td>Good Id</td>
+                <td>Good</td>
+                <td>Category</td>
+                <td>Manufacturer</td>
+                <td>Price</td>
+                <td>Count</td>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Model.GoodId</td>
+                    <td>@Model.GoodName</td>
+                    <td>@Model.Category.CategoryName</td>
+                    <td>@Model.Manufacturer.ManufacturerName</td>
+                    <td>@Model.Price</td>
+                    <td>@Model.GoodCount</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.GoodId }, new { @class = "text-success" }) |
+        @Html.ActionLink("Back to List", "Index", "Good", new { @class = "text-success" })
+    </p>
+</main>

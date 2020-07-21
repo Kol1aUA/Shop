@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="~/Content/style.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <header class="container mt-2">
+        <div class="row">
+            <div class="col-lg-1">
+                @Html.ActionLink("Shop", "Index", "Shop", null, new { @class = "text-reset" })
+            </div>
+            <div class="col-lg-9">
+                <div class="dropdown">
+                    <a class="text-reset dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        DB Tables
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="cms-dropdown">
+                        @Html.ActionLink("Good", "Index", "Good", null, new { @class = "dropdown-item" })
+                        @Html.ActionLink("Category", "Index", "Category", null, new { @class = "dropdown-item" })
+                        @Html.ActionLink("Manufacturer", "Index", "Manufacturer", null, new { @class = "dropdown-item" })
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 d-flex justify-content-between">
+                <div class="group">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 8 8">
+                        <path d="M3 0v1h4v5h-4v1h5v-7h-5zm1 2v1h-4v1h4v1l2-1.5-2-1.5z" />
+                    </svg>
+                    <a href="#" class="text-reset">Login</a>
+                </div>
+                <div class="group">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 8 8">
+                        <path d="M3 0v1h4v5h-4v1h5v-7h-5zm-1 2l-2 1.5 2 1.5v-1h4v-1h-4v-1z" />
+                    </svg>
+                    <a href="#" class="text-reset">Register</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    @RenderBody()
+
+    <footer class="mt-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 d-flex justify-content-center">
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-reset">Terms</a></li>
+                        <li><a href="#" class="text-reset">Privacy</a></li>
+                        <li><a href="#" class="text-reset">Help</a></li>
+                        <li><a href="#" class="text-reset">About</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 d-flex justify-content-center">
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="https://github.com/expeth/shopadoaspnet" target="_blank"
+                               class="text-reset">Github</a>
+                        </li>
+                        <li><a href="https://t.me/kovetskiy" target="_blank" class="text-reset">Telegram</a></li>
+                        <li>
+                            <a href="https://linkedin.com/in/kovetskiy/" target="_blank" class="text-reset">LinkedIn</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr />
+            <div class="row d-flex justify-content-center">
+                © ShopAdo, 2019
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
